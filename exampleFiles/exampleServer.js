@@ -18,4 +18,4 @@ server.on('request', (req, res) => {
 });
 
 
-server.listen(3000, () => console.log(`Go to http://localhost:${PORT}`));
+server.listen(PORT, () => console.log(`Go to http://localhost:${PORT}`));
