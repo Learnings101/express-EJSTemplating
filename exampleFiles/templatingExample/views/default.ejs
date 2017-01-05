@@ -16,9 +16,19 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet dolorem omnis doloremque consectetur qui eaque a quisquam. Esse distinctio cum quasi consequuntur soluta placeat, magnam modi aliquid nisi, iste nulla!</p>
+  <body class="container">
+    <div class="jumbotron">
+      <h1 class="display-3">Hello, world!</h1>
+      <h2 class="display-2"> This is my <%= title %></h2>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet dolorem omnis doloremque consectetur qui eaque a quisquam. Esse distinctio cum quasi consequuntur soluta placeat, magnam modi aliquid nisi, iste nulla!</p>
+      <p class="lead"><a href="#" class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+    </div>
+
+    <ul class="list-group">
+      <% users.forEach((user) => { %>
+      <li class="list-group-item"><%= user %></li> 
+      <% }); %>
+    </ul>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
