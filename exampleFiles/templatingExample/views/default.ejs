@@ -3,6 +3,7 @@
   <head><% include partials/page/head.ejs %></head>
   <body>
 
+  <% include partials/page/header.ejs %>
   <div class="container">
     <div class="jumbotron">
       <h1 class="display-3">Hello, world!</h1>
@@ -17,13 +18,9 @@
       <% }); %>
     </ul>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-      
-    </div> <!-- container -->
+    <% include partials/page/footer.ejs %>
+    <% include partials/page/jsdefaults.ejs %> <!-- Script tags needed on all pages -->
+  </div> <!-- container -->
 
 </body>
 </html>
