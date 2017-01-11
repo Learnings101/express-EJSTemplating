@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const PORT = 3000;
+const routes = require('./routes');
 
 app.set('views', __dirname + '/views') //specify the views directory
 app.set('view engine', 'ejs') //register the template engine
@@ -13,20 +14,9 @@ It can be a variable, object or any type of data set.
 app.locals.pagetitle = 'Awesome website';
 // app.locals.
 
-app.get('/', (req, res) => {
-  res.render('default.ejs', {
-    title: 'Homepage',
-    classname: 'home',
-    users: ['Tom', 'Dick', 'Harry']
-  });
-});
+app.get('/', routes.index);
 
-app.get('/about', (req, res) => {
-  res.render('default.ejs', {
-    title: 'About Us',
-    classname: 'about'
-  });
-});
+app.get('/about', routes.about);
 
 app.get('*', (req, res) => res.send('Bad Route'));
 
