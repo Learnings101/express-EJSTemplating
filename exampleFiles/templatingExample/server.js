@@ -5,6 +5,14 @@ const PORT = 3000;
 app.set('views', __dirname + '/views') //specify the views directory
 app.set('view engine', 'ejs') //register the template engine
 
+/*
+With Express, we can use the locals object to pass along information that we 
+want any of our templates to be able to access. 
+It can be a variable, object or any type of data set.
+*/
+app.locals.pagetitle = 'Awesome website';
+// app.locals.
+
 app.get('/', (req, res) => {
   res.render('default.ejs', {
     title: 'Homepage',
@@ -14,7 +22,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-  res.render('about.ejs', {
+  res.render('default.ejs', {
     title: 'About Us',
     classname: 'about'
   });
