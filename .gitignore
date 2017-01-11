@@ -35,7 +35,7 @@ bower_components/
 *.log
 *.sql
 *.sqlite
-*.md
+notes.md
 
 # OS generated files #
 ######################
